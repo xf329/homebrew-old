@@ -13,7 +13,7 @@ class TomcatAT7 < Formula
 
   keg_only :versioned_formula
 
-  depends_on "openjdk@8"
+  depends_on "openjdk"
 
   # Keep log folders
   skip_clean "libexec"
@@ -30,7 +30,7 @@ class TomcatAT7 < Formula
     libexec.install_symlink pkgetc => "conf"
 
     libexec.install Dir["*"]
-    (bin/"catalina").write_env_script "#{libexec}/bin/catalina.sh", JAVA_HOME: Formula["openjdk@8"].opt_prefix
+    (bin/"catalina").write_env_script "#{libexec}/bin/catalina.sh", JAVA_HOME: Formula["openjdk"].opt_prefix
   end
 
   def caveats
