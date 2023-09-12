@@ -13,9 +13,6 @@ class TomcatAT7 < Formula
 
   keg_only :versioned_formula
 
-  # End of life was 2021-03-31: https://tomcat.apache.org/tomcat-70-eol.html
-  disable! date: "2023-08-29", because: :deprecated_upstream
-
   depends_on "openjdk@8"
 
   # Keep log folders
