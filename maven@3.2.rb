@@ -13,7 +13,7 @@ class MavenAT32 < Formula
 
   keg_only :versioned_formula
 
-  depends_on "openjdk"
+  # depends_on "openjdk@8"
 
   def install
     # Remove windows files
